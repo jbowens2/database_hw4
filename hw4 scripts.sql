@@ -133,3 +133,12 @@ insert into works_on(Essn,Pno,Hours) values(987654321,30,20.0);
 insert into works_on(Essn,Pno,Hours) values(987654321,20,15.0);
 insert into works_on(Essn,Pno,Hours) values(888665555,20,null);
 
+
+/*dependents insert methods*/
+insert into dependent(Essn,Dependent_name,Sex,Bdate,Relationship) values(333445555, "Alice", "F", "1986-04-05","Daughter");
+insert into dependent(Essn,Dependent_name,Sex,Bdate,Relationship) values(333445555, "Theodore", "M", "1983-10-25","Son");
+insert into dependent(Essn,Dependent_name,Sex,Bdate,Relationship) values(333445555, "Joy", "F", "1958-05-03","Spouse");
+insert into dependent(Essn,Dependent_name,Sex,Bdate,Relationship) values(987654321, "Abner", "M", "1942-02-28","Spouse");
+insert into dependent(Essn,Dependent_name,Sex,Bdate,Relationship) values(123456789, "Michael", "M", "1988-01-04","Son");
+insert into dependent(Essn,Dependent_name,Sex,Bdate,Relationship) values(987654321, "Alice", "F", "1988-12-30","Daughter");
+insert into dependent(Essn,Dependent_name,Sex,Bdate,Relationship) values(987654321, "Elizabeth", "F", "1967-05-05","Spouse");
