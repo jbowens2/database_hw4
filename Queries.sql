@@ -32,13 +32,45 @@ where employee.Ssn in (select Essn from works_on A
                         where A.Pno in (select Pnumber from project))*/
                         
                         
+                        
 /*e*/
 /*select Lname, Fname
 from employee
 where not exists (select * from works_on);*/
 
 
-/*e*/
+/*f*/
 
+/*select Dname, avg(salary)
+from employee
+left join department
+on employee.Ssn = department.Mgr_ssn
+where department.Dname = "Research";
 
+select Dname, avg(salary)
+from employee
+left join department
+on employee.Ssn = department.Mgr_ssn
+where department.Dname = "Administration";
+
+select Dname, avg(salary)
+from employee
+left join department
+on employee.Ssn = department.Mgr_ssn
+where department.Dname = "Headquarters";*/
+
+/*g*/
+/*select avg(salary)
+from employee
+where employee.Sex = "M"*/
+
+/*h*/
+
+select Lname, Fname from employee A 
+where A.Ssn in (select Essn from works_on B
+                 where B.Pno in (select Pnumber from project C
+								  where C.Plocation = "Houston"
+                                  and exists (select Dnum from dept_location D 
+												 where not Dlocation = "Houston")));
+							
                  
